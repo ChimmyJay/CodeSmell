@@ -27,22 +27,27 @@ namespace CodeSmell
         /// <param name="order"></param>
         private static void Print(JetBrainsOrder order)
         {
-            Console.WriteLine("------------------------------------------");
+            PrintSeparateLine();
 
             PrintSubscriptionType(order);
 
-            Console.WriteLine("------------------------------------------");
+            PrintSeparateLine();
 
             PrintEachProductPrice(order);
 
-            Console.WriteLine("------------------------------------------");
+            PrintSeparateLine();
 
             PrintTotalPrice(order);
 
-            Console.WriteLine("------------------------------------------");
+            PrintSeparateLine();
 
             PrintLicenseeInformation(order);
 
+            PrintSeparateLine();
+        }
+
+        private static void PrintSeparateLine()
+        {
             Console.WriteLine("------------------------------------------");
         }
 
