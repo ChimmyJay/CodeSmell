@@ -18,14 +18,10 @@ namespace CodeSmell
                         EnumProduct.Rider,
                         EnumProduct.WebStorm
                     });
-            Print(order);
+            PrintJetBrainsOrder(order);
         }
 
-        /// <summary>
-        /// Print JetBrains order 
-        /// </summary>
-        /// <param name="order"></param>
-        private static void Print(JetBrainsOrder order)
+        private static void PrintJetBrainsOrder(JetBrainsOrder order)
         {
             PrintSeparateLine();
 
