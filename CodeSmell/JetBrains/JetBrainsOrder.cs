@@ -16,5 +16,15 @@ namespace CodeSmell.JetBrains
         public string UserEmail { get; set; }
         public IEnumerable<ProductPrice> Products { get; set; }
         public decimal GetTotalPrice() => Products.Sum(x => x.Price);
+
+        public decimal GetTax()
+        {
+            return GetTotalPrice() * TaxRate;
+        }
+
+        public decimal GetGrandTotal()
+        {
+            return GetTotalPrice() * (TaxRate + 1);
+        }
     }
 }

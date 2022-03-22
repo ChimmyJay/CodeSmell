@@ -57,8 +57,8 @@ namespace CodeSmell
         private static void PrintTotalPrice(JetBrainsOrder order)
         {
             Console.WriteLine("{0,30}", $"Total Price    {order.GetTotalPrice()} USD");
-            Console.WriteLine("{0,30}", $"Tax(5%)   {GetTax(order)} USD");
-            Console.WriteLine("{0,30}", $"Grand Total   {GetGrandTotal(order)} USD");
+            Console.WriteLine("{0,30}", $"Tax(5%)   {order.GetTax()} USD");
+            Console.WriteLine("{0,30}", $"Grand Total   {order.GetGrandTotal()} USD");
         }
 
         private static void PrintEachProductPrice(JetBrainsOrder order)
@@ -73,16 +73,6 @@ namespace CodeSmell
         private static void PrintSubscriptionType(JetBrainsOrder order)
         {
             Console.WriteLine($@"Subscription type: '{order.SubscriptionType}' ");
-        }
-
-        private static decimal GetTax(JetBrainsOrder order)
-        {
-            return order.GetTotalPrice() * order.TaxRate;
-        }
-
-        private static decimal GetGrandTotal(JetBrainsOrder order)
-        {
-            return order.GetTotalPrice() * (order.TaxRate + 1);
         }
     }
 }
