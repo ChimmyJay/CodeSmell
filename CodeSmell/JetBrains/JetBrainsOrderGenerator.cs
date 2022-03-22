@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -7,12 +8,18 @@ namespace CodeSmell.JetBrains
     {
         private readonly decimal _faxRate;
 
-        public JetBrainsOrderGenerator() : this(0.05m)
+        public JetBrainsOrderGenerator()
         {
+            _faxRate = 0.05m;
         }
 
         public JetBrainsOrderGenerator(decimal faxRate)
         {
+            if (_faxRate < 0)
+            {
+                throw new InvalidOperationException();
+            }
+
             _faxRate = faxRate;
         }
 
