@@ -29,22 +29,18 @@ namespace CodeSmell
         {
             Console.WriteLine("------------------------------------------");
 
-            //PrintSubscriptionType
             PrintSubscriptionType(order);
 
             Console.WriteLine("------------------------------------------");
 
-            //PrintEachProductPrice
             PrintEachProductPrice(order);
 
             Console.WriteLine("------------------------------------------");
 
-            //PrintTotalPrice
             PrintTotalPrice(order);
 
             Console.WriteLine("------------------------------------------");
 
-            //PrintLicenseeInformation
             PrintLicenseeInformation(order);
 
             Console.WriteLine("------------------------------------------");
