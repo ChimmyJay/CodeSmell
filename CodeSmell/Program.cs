@@ -77,12 +77,12 @@ namespace CodeSmell
 
         private static decimal GetTax(JetBrainsOrder order)
         {
-            return order.GetTotalPrice() * order.FaxRate;
+            return order.GetTotalPrice() * order.TaxRate;
         }
 
         private static decimal GetGrandTotal(JetBrainsOrder order)
         {
-            return order.GetTotalPrice() * (order.FaxRate + 1);
+            return order.GetTotalPrice() * (order.TaxRate + 1);
         }
     }
 }
